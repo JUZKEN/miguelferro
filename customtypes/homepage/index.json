@@ -1,0 +1,19 @@
+{
+  "id": "homepage",
+  "label": "Homepage",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "leadText": {
+        "config": {
+          "label": "Lead Text",
+          "placeholder": "",
+          "allowTargetBlank": false,
+          "single": "heading1,strong"
+        },
+        "type": "StructuredText"
+      }
+    }
+  }
+}

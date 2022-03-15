@@ -1,5 +1,8 @@
 {
   "_cts": {
-    "project": {}
+    "homepage": {},
+    "menu": {
+      "menuLinks": {}
+    }
   }
 }

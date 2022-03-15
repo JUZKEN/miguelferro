@@ -1,9 +1,18 @@
 {
-  "id": "10953a56-ae9c-4a57-b9ea-e685ea4a9d4f",
-  "uid": "in-rerum-consequuntur",
+  "id": "109619ee-5686-484b-951b-3d94f465b8a3",
+  "uid": "deleniti-autem-ipsa",
   "type": "project",
   "data": {
-    "title": "enhance killer mindshare",
-    "description": "incubate global e-business"
+    "title": "extend vertical markets",
+    "description": "grow e-business niches",
+    "primaryImage": {
+      "dimensions": {
+        "width": 900,
+        "height": 500
+      },
+      "alt": "Placeholder image",
+      "copyright": null,
+      "url": "https://images.unsplash.com/photo-1606248897732-2c5ffe759c04?w=900&h=500&fit=crop"
+    }
   }
 }

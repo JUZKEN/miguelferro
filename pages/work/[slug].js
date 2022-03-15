@@ -1,23 +1,36 @@
+import _ from 'lodash'
 import { createClient, linkResolver } from '../../prismicio'
 import * as prismicH from '@prismicio/helpers'
+import Image from 'next/image'
+import Layout from './../../components/Layout'
 
-export default function Project({ page }) {
-  const { title, description } = page.data;
-
+export default function Project({ menu, page }) {
+  const {
+    title,
+    description,
+    primaryImage
+  } = page.data;
+  
   return (
-    <div>
+    <Layout menu={menu}>
       <h1>{title}</h1>
       <p>{description}</p>
-    </div>
+      {!_.isEmpty(primaryImage) ? <Image width={primaryImage.dimensions.width} height={primaryImage.dimensions.height} src={primaryImage.url}/> : null}
+    </Layout>
   )
 }
 
 export async function getStaticProps({ params, previewData }) {
   const client = createClient({ previewData })
-  const page = await client.getSingle('project', params.slug)
+
+  const menu = await client.getSingle('menu')
+  const page = await client.getByUID('project', params.slug)
 
   return {
-    props: { page },
+    props: {
+      menu,
+      page
+    },
   }
 }
 

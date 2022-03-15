@@ -1,0 +1,34 @@
+{
+  "id": "ebfbdac0-6a7f-463f-a1ee-cfe16282dbe8",
+  "uid": "tenetur-et-velit",
+  "type": "homepage",
+  "data": {
+    "leadText": [
+      {
+        "type": "heading1",
+        "text": "Aggregate next-generation e-markets",
+        "spans": []
+      }
+    ],
+    "featuredProjects": [
+      {
+        "project": {
+          "link_type": "Web",
+          "url": "https://slicemachine.dev"
+        }
+      },
+      {
+        "project": {
+          "link_type": "Web",
+          "url": "https://prismic.io"
+        }
+      },
+      {
+        "project": {
+          "link_type": "Web",
+          "url": "https://prismic.io"
+        }
+      }
+    ]
+  }
+}

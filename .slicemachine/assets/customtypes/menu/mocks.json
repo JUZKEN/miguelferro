@@ -1,0 +1,44 @@
+{
+  "id": "b4012885-9577-45f7-854e-3cd9773e63d6",
+  "uid": "error-optio-nulla",
+  "type": "menu",
+  "data": {
+    "menuLinks": [
+      {
+        "title": "enhance 24/365 action-items",
+        "link": {
+          "link_type": "Web",
+          "url": "https://slicemachine.dev"
+        }
+      },
+      {
+        "title": "repurpose cross-platform methodologies",
+        "link": {
+          "link_type": "Web",
+          "url": "http://twitter.com"
+        }
+      },
+      {
+        "title": "visualize viral supply-chains",
+        "link": {
+          "link_type": "Web",
+          "url": "https://prismic.io"
+        }
+      },
+      {
+        "title": "implement open-source paradigms",
+        "link": {
+          "link_type": "Web",
+          "url": "https://prismic.io"
+        }
+      },
+      {
+        "title": "incubate back-end e-services",
+        "link": {
+          "link_type": "Web",
+          "url": "http://twitter.com"
+        }
+      }
+    ]
+  }
+}

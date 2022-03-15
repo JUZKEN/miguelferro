@@ -25,6 +25,14 @@
           "placeholder": ""
         },
         "type": "Text"
+      },
+      "primaryImage": {
+        "config": {
+          "label": "Primary Image",
+          "constraint": {},
+          "thumbnails": []
+        },
+        "type": "Image"
       }
     }
   }

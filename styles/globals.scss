@@ -1,0 +1,48 @@
+@import 'variables';
+@import './utils/media-queries';
+@import './mixins/typography';
+@import './pages/home';
+@import './components/header';
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: $base-font-family;
+  color: $primary;
+  background-color: #f9f9f9;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $headings-font-family;
+}
+
+h1 {
+  @extend %font-size-900;
+}
+
+h2 {
+  @extend %font-size-600;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.15s ease-in-out;
+
+  &:hover {
+    color: lighten($primary, 15%);
+  }
+}
+
+.container {
+  position: relative;
+  width: 95%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+}

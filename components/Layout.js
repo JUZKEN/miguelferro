@@ -6,7 +6,11 @@ function Layout({ menu, children }) {
   return (
     <div className='mf-layout'>
       <Header menu={menu}/>
-      <main className='mf-content'>{children}</main>
+      <main className='mf-content'>
+        <div className='container'>
+          {children}
+        </div>
+      </main>
       <Footer />
     </div>
   );

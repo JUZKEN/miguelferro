@@ -2,7 +2,7 @@ import _ from 'lodash'
 import { createClient, linkResolver } from '../../prismicio'
 import * as prismicH from '@prismicio/helpers'
 import Image from 'next/image'
-import Layout from './../../components/Layout'
+import Layout from '../../components/Layout'
 
 export default function Project({ menu, page }) {
   const {

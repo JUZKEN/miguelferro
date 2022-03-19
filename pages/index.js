@@ -7,12 +7,14 @@ export default function Home({ menu, page, featuredProjects }) {
 
   return (
     <Layout menu={menu}>
-      <PrismicRichText field={leadText} />
+      <div className='mf-home__leadtext'>
+        <PrismicRichText field={leadText} />
+      </div>
       {featuredProjects.map(item => {
         return (
-          <h1 key={item.uid}>
+          <h2 key={item.uid}>
             <PrismicLink field={item}>{item.data.title}</PrismicLink>
-          </h1>
+          </h2>
         )
       })}
     </Layout>

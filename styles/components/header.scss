@@ -1,0 +1,21 @@
+.mf-header {
+  padding: 1.5rem 0;
+
+  .wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .mf-menu {
+      @extend %font-size-100;
+      margin: 0 -0.5rem;
+
+      > a {
+        padding: 0 0.5rem;
+      }
+
+    }
+
+  }
+
+}

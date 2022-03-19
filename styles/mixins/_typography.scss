@@ -1,0 +1,23 @@
+%font-size-100 {
+  font-size: 1.15rem;
+}
+
+%font-size-200 {
+  font-size: 1.25rem;
+}
+
+%font-size-400 {
+  font-size: 2rem;
+}
+
+%font-size-600 {
+  font-size: clamp(2rem, 2.5vw + 1rem, 4rem);
+}
+
+%font-size-800 {
+  font-size: clamp(2.5rem, 4vw + 1rem, 5.3rem);
+}
+
+%font-size-900 {
+  font-size: clamp(3rem, 5vw + 1rem, 6.8rem);
+}

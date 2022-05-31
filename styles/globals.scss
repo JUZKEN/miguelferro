@@ -14,7 +14,9 @@ body {
   margin: 0;
   font-family: $base-font-family;
   color: $primary;
-  background-color: #f9f9f9;
+  background-color: $secondary;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -26,7 +28,7 @@ h1 {
 }
 
 h2 {
-  @extend %font-size-600;
+  @extend %font-size-800;
 }
 
 a {
@@ -45,4 +47,12 @@ a {
   height: auto;
   margin-left: auto;
   margin-right: auto;
+}
+
+.mf-layout {
+  overflow: hidden;
+}
+
+.mf-content {
+  padding: 5rem 0;
 }

@@ -15,15 +15,19 @@
     "@prismicio/next": "^0.1.0",
     "@prismicio/react": "^2.1.2",
     "@prismicio/slice-simulator-react": "^0.2.0",
+    "gsap": "^3.10.4",
+    "jquery": "^3.6.0",
     "lodash": "^4.17.21",
     "next": "12.1.0",
     "react": "17.0.2",
+    "react-3d-hover": "^1.1.1",
     "react-dom": "17.0.2",
+    "react-gsap": "^3.2.1",
     "sass": "^1.49.9"
   },
   "devDependencies": {
     "eslint": "8.11.0",
     "eslint-config-next": "12.1.0",
-    "slice-machine-ui": "^0.3.1"
+    "slice-machine-ui": "^0.3.3"
   }
 }

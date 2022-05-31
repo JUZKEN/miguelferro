@@ -1,22 +1,54 @@
+import React, { useState, useRef } from 'react';
+import gsap from 'gsap';
 import { createClient } from '../prismicio'
-import { PrismicLink, PrismicRichText } from '@prismicio/react'
 import Layout from './../components/Layout';
+import ProjectItem from './../components/ProjectItem';
 
 export default function Home({ menu, page, featuredProjects }) {
+  let imageWrap = useRef(null);
   const { leadText } = page.data;
+  const [itemHovered, setItemHovered] = useState(false);
+  const [previewImageUrl, setPreviewImageUrl] = useState(null);
+
+  const onHoverItem = () => {
+    setItemHovered(true);
+  }
+
+  const onHoverItemLeave = () => {
+    setItemHovered(false);
+  }
+
+  const changePreviewImage = (url) => setPreviewImageUrl(url);
+
+  const moveImage = (e) => {
+    let xpos = e.clientX;
+    let ypos = e.clientY;
+
+    const tl = gsap.timeline();
+    tl.to(imageWrap, {
+      x: xpos * 0.4,
+      y: ypos * 0.4
+    });
+  }
+
+  const lerp = (start, end, amt) => {
+    return (1-amt)*start+amt*end
+  }
 
   return (
     <Layout menu={menu}>
-      <div className='mf-home__leadtext'>
-        <PrismicRichText field={leadText} />
+      <div className='mf-home__hero'><h1>{leadText[0].text}</h1></div>
+      <div className={itemHovered ? "mf-home__featured-projects item-hovered" : "mf-home__featured-projects"}>
+        {featuredProjects.map(item => {
+          return (
+            <ProjectItem key={item.data.title} changePreviewImage={changePreviewImage} moveImage={moveImage} item={item} onHover={onHoverItem} onHoverLeave={onHoverItemLeave} />
+          )
+        })}
+        <div ref={el => {imageWrap = el}} className='image-wrap'>
+          <div className='image-wrap-img' style={{backgroundImage: `url(${previewImageUrl})`}}></div>
+        </div>
+        <div className='blur-overlay'></div>
       </div>
-      {featuredProjects.map(item => {
-        return (
-          <h2 key={item.uid}>
-            <PrismicLink field={item}>{item.data.title}</PrismicLink>
-          </h2>
-        )
-      })}
     </Layout>
   )
 }

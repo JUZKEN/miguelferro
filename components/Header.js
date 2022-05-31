@@ -1,6 +1,6 @@
 import React from 'react'
-import { PrismicLink } from '@prismicio/react'
-import Image from 'next/image'
+import Link from 'next/link'
+import Image from 'next/image';
 
 function Header({ menu }) {
   const { menuLinks } = menu.data
@@ -9,12 +9,11 @@ function Header({ menu }) {
     <div className='mf-header'>
       <div className='container'>
         <div className='wrapper'>
-          <Image src="/logo.svg" width={50} height={42} />
-          <div className='mf-menu'>
-            {menuLinks.map(item => {
-              return <PrismicLink key={item.link.id} field={item.link}>{item.title}</PrismicLink>
-            })}
-          </div>
+          <Link href='/'>
+            <a className="site-branding"><Image src="/logo.svg" width={47} height={42} /></a>
+            {/* <h2 className='site-branding'>Miguel Ferro</h2> */}
+          </Link>
+          <Link href='mailto:mferro.acc@gmail.com'>Get in touch</Link>
         </div>
       </div>
     </div>

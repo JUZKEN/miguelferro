@@ -7,14 +7,12 @@ import Layout from '../../components/Layout'
 export default function Project({ menu, page }) {
   const {
     title,
-    description,
     primaryImage
   } = page.data;
   
   return (
     <Layout menu={menu}>
       <h1>{title}</h1>
-      <p>{description}</p>
       {!_.isEmpty(primaryImage) ? <Image width={primaryImage.dimensions.width} height={primaryImage.dimensions.height} src={primaryImage.url}/> : null}
     </Layout>
   )

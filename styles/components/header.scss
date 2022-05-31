@@ -1,10 +1,35 @@
 .mf-header {
-  padding: 1.5rem 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin-top: 1.5rem;
+  pointer-events: none;
+  z-index: 999;
 
   .wrapper {
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    .site-branding {
+      font-size: clamp(1.25rem, 1vw + 1rem, 2rem);
+      margin: 0;
+      pointer-events: auto;
+      user-select: none;
+    }
+
+    a:not(.site-branding) {
+      color: $primary;
+      border-bottom: 1px solid $primary;
+      transition: color 0.15s ease-in-out;
+      pointer-events: auto;
+
+
+      &:hover {
+        color: $white;
+      }
+    }
 
     .mf-menu {
       @extend %font-size-100;

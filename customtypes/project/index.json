@@ -19,9 +19,9 @@
         },
         "type": "Text"
       },
-      "description": {
+      "category": {
         "config": {
-          "label": "Description",
+          "label": "Category",
           "placeholder": ""
         },
         "type": "Text"

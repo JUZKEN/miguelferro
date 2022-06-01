@@ -1,0 +1,16 @@
+.mf-footer {
+  text-align: center;
+  padding: 1rem 0;
+  a {
+    display: inline-block;
+    font-size: 20px;
+    margin: 0 0.5rem;
+    border-bottom: 1px solid $primary;
+    transition: all 0.15s ease-in-out;
+
+    &:hover {
+      color: $red;
+      border-bottom: 1px solid $red;
+    }
+  }
+}

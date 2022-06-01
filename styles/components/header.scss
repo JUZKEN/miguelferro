@@ -20,14 +20,16 @@
     }
 
     a:not(.site-branding) {
-      color: $primary;
-      border-bottom: 1px solid $primary;
-      transition: color 0.15s ease-in-out;
+      font-size: 20px;
+      color: $white;
+      border-bottom: 1px solid $white;
+      transition: all 0.15s ease-in-out;
       pointer-events: auto;
 
 
       &:hover {
-        color: $white;
+        color: $red;
+        border-bottom: 1px solid $red;
       }
     }
 

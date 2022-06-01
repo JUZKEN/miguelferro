@@ -12,19 +12,20 @@
 
   &__hero {
     user-select: none;
-    width: 60%;
+    width: 75%;
     margin: 0 auto;
     padding: 50px 0 100px;
     h1 {
       text-align: center;
-      @extend %font-size-600;
+      color: $white;
+      @extend %font-size-800;
     }
   }
 
   &__featured-projects {
     text-align: center;
-    margin-bottom: 70vh;
     user-select: none;
+    padding-bottom: 100px;
 
     @media (max-width: 1200px) {
       .image-wrap, .blur-overlay {
@@ -64,7 +65,7 @@
       }
       .image-wrap {
         visibility: visible;
-        z-index: 1;
+        z-index: 2;
       }
     }
 
@@ -78,18 +79,22 @@
       .category {
         display: flex;
         position: absolute;
-        bottom: 11px;
+        bottom: 10px;
         left: 50%;
         transform: translateX(-50%);
         align-items: center;
         justify-content: center;
         pointer-events: none;
         font-weight: 400;
+        transition: all 0.15s ease-in-out;
 
         svg {
           margin-top: 4px;
           width: 12px;
           margin-right: 5px;
+          path {
+            transition: all 0.15s ease-in-out;
+          }
         }
       }
 
@@ -105,24 +110,8 @@
         }
       }
 
-      .image-preview {
-        position: absolute;
-        top: 58%;
-        right: 50%;
-        transform: translate(50%, 0);
-        opacity: 0;
-        pointer-events: none;
-        width: 60%;
-        height: 35vw;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-        z-index: -1;
-        transition: opacity 0.1s ease-in;
-      }
-
       &.active {
-        z-index: 2;
+        z-index: 3;
         ~ .blur-overlay {
           position: fixed;
           top: 0;
@@ -130,23 +119,21 @@
           width: 100%;
           height: 100%;
           backdrop-filter: blur(4px);
+          z-index: 1;
         }
         ~ .mf-home__featured-projects__item {
           z-index: 0;
         }
-        // .image-preview {
-        //   opacity: 1;
-        // }
         .category {
-          color: $white;
+          color: $red;
           svg {
             path {
-              fill: $white;
+              fill: $red;
             }
           }
         }
         a {
-          color: $white;
+          color: $red;
         }
       }
 

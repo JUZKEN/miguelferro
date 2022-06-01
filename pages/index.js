@@ -31,10 +31,6 @@ export default function Home({ menu, page, featuredProjects }) {
     });
   }
 
-  const lerp = (start, end, amt) => {
-    return (1-amt)*start+amt*end
-  }
-
   return (
     <Layout menu={menu}>
       <div className='mf-home__hero'><h1>{leadText[0].text}</h1></div>

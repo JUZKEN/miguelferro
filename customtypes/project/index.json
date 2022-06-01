@@ -33,6 +33,14 @@
           "thumbnails": []
         },
         "type": "Image"
+      },
+      "website": {
+        "config": {
+          "label": "Website",
+          "placeholder": "",
+          "allowTargetBlank": false
+        },
+        "type": "Link"
       }
     }
   }

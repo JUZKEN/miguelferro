@@ -1,10 +1,11 @@
 import _ from 'lodash';
 import React, { useState } from 'react';
-import { PrismicLink } from '@prismicio/react';
+import Link from 'next/link';
 
 function ProjectItem({item, onHover, onHoverLeave, moveImage, changePreviewImage}) {
   const [itemHovered, setItemHovered] = useState(false);
   const toggleItemHover = () => setItemHovered(!itemHovered);
+  const projectTitleElement = <h2 className='title'>{item.data.title}</h2>
 
   return (
     <div className={itemHovered ? "mf-home__featured-projects__item active" : "mf-home__featured-projects__item"}>
@@ -17,11 +18,11 @@ function ProjectItem({item, onHover, onHoverLeave, moveImage, changePreviewImage
               toggleItemHover();
               onHoverLeave();
             }}>
-              <PrismicLink field={item}>
-            <h2 className='title'>
-              {item.data.title}
-            </h2>
-            </PrismicLink>
+              {item.data.website.url ?
+              <a href={item.data.website.url} target="_blank">
+                {projectTitleElement}
+              </a>
+              : projectTitleElement}
         </div>
         {item.data.category ?
         <div className='category'>

@@ -1,10 +1,10 @@
 {
-  "id": "568f0872-fb37-4243-977d-9befa057701b",
-  "uid": "optio-repellendus-atque",
+  "id": "a972a445-7e99-4489-ae5a-0d21cdb3d4a6",
+  "uid": "nobis-temporibus-et",
   "type": "project",
   "data": {
-    "title": "deploy ubiquitous bandwidth",
-    "category": "brand rich e-commerce",
+    "title": "generate frictionless paradigms",
+    "category": "exploit customized communities",
     "primaryImage": {
       "dimensions": {
         "width": 900,
@@ -12,7 +12,11 @@
       },
       "alt": "Placeholder image",
       "copyright": null,
-      "url": "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?w=900&h=500&fit=crop"
+      "url": "https://images.unsplash.com/photo-1560762484-813fc97650a0?w=900&h=500&fit=crop"
+    },
+    "website": {
+      "link_type": "Web",
+      "url": "https://prismic.io"
     }
   }
 }

@@ -41,6 +41,9 @@ export default function Home({ menu, page, featuredProjects }) {
           )
         })}
         <div ref={el => {imageWrap = el}} className='image-wrap'>
+          <div className='image-wrap-badge'>
+            
+          </div>
           <div className='image-wrap-img' style={{backgroundImage: `url(${previewImageUrl})`}}></div>
         </div>
         <div className='blur-overlay'></div>

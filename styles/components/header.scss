@@ -7,16 +7,23 @@
   pointer-events: none;
   z-index: 999;
 
+  @media (max-width: 575.98px) {
+    margin: 0;
+    padding: 1rem 0;
+  }
+
   .wrapper {
     display: flex;
     align-items: center;
     justify-content: space-between;
 
     .site-branding {
+      text-align: left;
       font-size: clamp(1.25rem, 1vw + 1rem, 2rem);
       margin: 0;
       pointer-events: auto;
       user-select: none;
+      height: 28px;
     }
 
     a:not(.site-branding) {
@@ -26,6 +33,10 @@
       transition: all 0.15s ease-in-out;
       pointer-events: auto;
 
+      @media (max-width: 575.98px) {
+        font-size: 18px;
+        margin-bottom: 5px;
+      }
 
       &:hover {
         color: $red;

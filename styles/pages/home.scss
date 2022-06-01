@@ -1,20 +1,21 @@
 .mf-home {
 
-  &__leadtext {
-    padding-top: 15%;
-    padding-bottom: 8vw;
-    color: $secondary;
-
-    strong {
-      color: $primary;
-    }
-  }
-
   &__hero {
     user-select: none;
     width: 75%;
     margin: 0 auto;
     padding: 50px 0 100px;
+
+    @media (max-width: 991.98px) {
+      width: 90%;
+      padding: 30px 0 50px;
+    }
+
+    @media (max-width: 575.98px) {
+      width: 100%;
+      padding: 30px 0;
+    }
+
     h1 {
       text-align: center;
       color: $white;
@@ -27,10 +28,14 @@
     user-select: none;
     padding-bottom: 100px;
 
-    @media (max-width: 1200px) {
+    @media (max-width: 1199.98px) {
       .image-wrap, .blur-overlay {
         display: none;
       }
+    }
+
+    @media (max-width: 991.98px) {
+      padding-bottom: 0;
     }
 
     .image-wrap {
@@ -88,6 +93,15 @@
         font-weight: 400;
         transition: all 0.15s ease-in-out;
 
+        @media (max-width: 1199.98px) {
+          position: relative;
+          bottom: 25px;
+        }
+
+        @media (max-width: 991.98px) {
+          bottom: 20px;
+        }
+
         svg {
           margin-top: 4px;
           width: 12px;
@@ -102,6 +116,10 @@
         display: inline-block;
         padding: 30px 0;
         color: $primary;
+
+        @media (max-width: 991.98px) {
+          padding: 1rem 0;
+        }
 
         .title {
           @extend %font-size-900;

@@ -5,8 +5,13 @@
     display: inline-block;
     font-size: 20px;
     margin: 0 0.5rem;
-    border-bottom: 1px solid $primary;
+    color: $white;
+    border-bottom: 1px solid $white;
     transition: all 0.15s ease-in-out;
+
+    @media (max-width: 575.98px) {
+      font-size: 18px;
+    }
 
     &:hover {
       color: $red;

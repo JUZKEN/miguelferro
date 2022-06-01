@@ -3,6 +3,7 @@ import gsap from 'gsap';
 import { createClient } from '../prismicio'
 import Layout from './../components/Layout';
 import ProjectItem from './../components/ProjectItem';
+import Head from 'next/head'
 
 export default function Home({ menu, page, featuredProjects }) {
   let imageWrap = useRef(null);
@@ -33,6 +34,9 @@ export default function Home({ menu, page, featuredProjects }) {
 
   return (
     <Layout menu={menu}>
+      <Head>
+        <title>Miguel Ferro - Web Portfolio</title>
+      </Head>
       <div className='mf-home__hero'><h1>{leadText[0].text}</h1></div>
       <div className={itemHovered ? "mf-home__featured-projects item-hovered" : "mf-home__featured-projects"}>
         {featuredProjects.map(item => {

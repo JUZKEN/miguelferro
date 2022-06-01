@@ -1,6 +1,5 @@
 import _ from 'lodash';
 import React, { useState } from 'react';
-import Link from 'next/link';
 
 function ProjectItem({item, onHover, onHoverLeave, moveImage, changePreviewImage}) {
   const [itemHovered, setItemHovered] = useState(false);
@@ -19,7 +18,7 @@ function ProjectItem({item, onHover, onHoverLeave, moveImage, changePreviewImage
               onHoverLeave();
             }}>
               {item.data.website.url ?
-              <a href={item.data.website.url} target="_blank">
+              <a href={item.data.website.url} target="_blank" rel="noreferrer">
                 {projectTitleElement}
               </a>
               : projectTitleElement}

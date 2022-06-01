@@ -10,8 +10,7 @@ function Header({ menu }) {
       <div className='container'>
         <div className='wrapper'>
           <Link href='/'>
-            <a className="site-branding"><Image src="/logo2.svg" width={175} height={28} /></a>
-            {/* <h2 className='site-branding'>Miguel Ferro</h2> */}
+            <a className="site-branding"><Image src="/logo2.svg" alt="miguel ferro" width={175} height={28} /></a>
           </Link>
           <Link href='mailto:mferro.acc@gmail.com'>Get in touch</Link>
         </div>

@@ -1,4 +1,5 @@
 import React from "react";
+import '../public/fonts/stylesheet.css';
 import '../styles/globals.scss'
 import Link from 'next/link'
 import { PrismicProvider } from '@prismicio/react'

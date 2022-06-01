@@ -13,7 +13,6 @@ export default function Project({ menu, page }) {
   return (
     <Layout menu={menu}>
       <h1>{title}</h1>
-      {!_.isEmpty(primaryImage) ? <Image width={primaryImage.dimensions.width} height={primaryImage.dimensions.height} src={primaryImage.url}/> : null}
     </Layout>
   )
 }

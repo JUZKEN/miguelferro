@@ -23,13 +23,13 @@ export default function App({ Component, pageProps }) {
         </Link>
       )}>
       <PrismicPreview repositoryName={repositoryName}>
+        <Component {...pageProps} />
         <AnimatedCursor 
           innerSize={8}
           outerScale={7}
           outerAlpha={0.1}
           color='255, 255, 255'
           />
-        <Component {...pageProps} />
       </PrismicPreview>
     </PrismicProvider>
   )
